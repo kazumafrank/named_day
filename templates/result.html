@@ -1,0 +1,23 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <mata name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <title>あなたの今日に名前を付けます</title>
+</head>
+
+<body>
+    <h1>今日の出来事を詳細に書き出してみよう</h1>
+
+    <form action="named" method="POST">
+        <input type="text" placeholder='今日の出来事' name='event'>
+        <input type="submit" value='名前を付ける'>
+    </form>
+
+{% if named_day %}
+<p>あなたの今日は「{{named_day}}」な日です</p>
+{% endif %}
+
+</body>
+</html>
+
